@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordes y Sombras </title>
+    <link rel="stylesheet" href="css/estilo1.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial CSS Bordes y Redondeo </h1>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="bordes.html"> Bordes </a> </li>
+            <li> <a href="sombras.html"> Sombras </a> </li>
+            <li> <a href="imagenes.html"> Imagenes </a> </li>
+            <li> <a href="cajas.html"> Cajas </a> </li>
+            <li> <a href="Posicion.html"> Posicion </a> </li>
+            <li> <a href="Transformacion.html"> Transformacion </a> </li>
+            <li> <a href="Formularios.html"> Formularios </a> </li>
+            <li> <a href="iframe.html"> iframe </a> </li>
+            <li> <a href="Transiciones.html"> Transiciones </a> </li>
+            <li> <a href="Columnas.html"> Columnas </a> </li>
+            <li> <a href="Video.html"> Video </a> </li>
+            <li> <a href="Audio.html"> Audio </a> </li>
+            <li> <a href="transparencias.html"> Transparencias </a> </li>
+            <li> <a href="Animacion.html"> Animacion </a> </li>
+            <li> <a href="SVG.html"> SVG </a> </li>
+            <li> <a href="Responsive.html"> Responsive </a> </li>
+            <li> <a href="Contenidoeditable.html"> Contenido editable </a> </li>
+            <li> <a href="Storage.html"> Storage </a> </li>
+        </ul>
+    </nav>
+    <section>
+        <h2> Líneas separadoras horizontales </h2>
+
+        <article>
+            <p>
+                Existen dos formas para crear una línea separadora horizontal y una única forma para crear una línea
+                separadora vertical.
+                Para crear una línea horizontal la forma fácil y rápida es utilizar la etiqueta < hr>, que no se cierra
+                    y que crea una línea horizontal simple.
+            </p>
+            <p>
+
+                En lo referente a los tipos de bordes existen las siguientes posibilidades:
+                <br><b>none:</b> sin línea.
+                <br><b>solid:</b> con línea continua (valor por defecto).
+                <br><b>dotted:</b> línea punteada.
+                <br><b>dashed</b>: línea discontinua (segmentos cortos de línea).
+                <br><b>inset:</b> línea con el color en bajorelieve.
+                <br><b>outset:</b> línea que simula el relieve.
+            </p>
+            <h3>Ejemplo </h3>
+            <hr>
+        </article>
+        <h2> Líneas separadoras verticales </h2>
+        <article>
+            <div>
+                Para crear líneas verticales tenemos que definir uno de los 4 bordes que tiene una caja (< div>),
+                    utilizando una (o varias) de estas propiedades:
+            </div>
+            <h3>Ejemplo: </h3>
+
+        </article>
+        <h2>Bordes simples</h2>
+
+        <article>
+            <div id="borde_redondo">
+                borde redondo
+            </div>
+            <p>
+                <br>width: 300px;
+                <br> height: 100px;
+                <br> border: 3px solid rgb(red, green, blue);
+                <br> border-radius: 22px;
+                <br> padding-left: 15px;
+                <br> padding-top: 30px;
+
+            </p>
+        </article>
+
+        <h2>Bordes redondeados </h2>
+        <article>
+            <p>Con la propiedad border-radius tenemos la posibilidad de crear
+            <div> con las esquinas con bordes redondeados, pudiendo especificar la suavidad de las esquinas de manera
+                conjunta o cada una de las esquinas por separado.
+
+                Para poder visualizar una esquina con borde redondeado, además de la propiedad border-radius, tenemos
+                que definir un borde normal (con border) y/o indicar un color de fondo (con background-color).</p>
+                <h3> Ejemplo </h3>
+
+                <div id="borde_diferente">
+                    Ejemplo de borde diferente
+                    <br>border-radius: 10px 0px 39px 22px;
+                </div>
+        </article>
+    </section>
+    <footer></footer>
+</body>
+
+</html>

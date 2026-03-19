@@ -1,0 +1,242 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 2px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para la navegación (nav) */
+nav {
+    background-color: #34495e;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #b9bfc5;
+}
+
+
+
+/* Estilos para las secciones */
+section {
+    flex: 2;
+    min-width: 300px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    background-color: rgb(77, 164, 241);
+    border-radius: 5px;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+#borde_redondo {
+    width: 300px;
+    height: 100px;
+    border: 3px solid rgb(red, green, blue);
+    border-radius: 22px;
+    padding-left: 15px;
+    padding-top: 30px;
+}
+
+#borde_diferente {
+    border: 3px solid rgb(red, green, blue);
+    border-radius: 10px 0px 39px 22px;
+    padding-left: 20px;
+}
+
+#sombra_interna {
+    width: 300px;
+    height: 100px;
+    padding-left: 20px;
+    padding-top: 30px;
+    box-shadow: 7px 20px 10px black inset;
+}
+
+#halo {
+    width: 700px;
+    height: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: #dde1e4;
+    box-shadow: 0 0 30px rgb(80, 80, 190);
+}
+
+#sombra_texto {
+    text-shadow: 10px 10px 5px gray;
+}
+
+#sombra_multiple {
+    width: 300px;
+    height: 100px;
+    padding-left: 20px;
+    padding-top: 30px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 0px 20px red inset, 0px 0px 25px blue;
+}
+
+/* Estilos para los artículos */
+article {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+}
+
+article hr {
+    border-width: 7px;
+    border-style: outset;
+    border-color: rgb(33, 135, 218);
+    width: 70%;
+}
+
+article h4 {
+    background-color: rgb(8, 34, 56);
+    border-radius: 5px;
+    color: #96bada;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+article div {
+    border-top: 1px solid rgb(46, 19, 223);
+    border-bottom: 2px dotted rgb(64, 0, 128);
+    border-right: 1px dashed #3C5391;
+    border-left: 1px inset orange;
+}
+
+#sombra {
+    box-shadow: 6px 20px 10px rgba(101, 8, 120, 0.103);
+}
+
+article h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+article p {
+    color: #666;
+}
+
+
+
+/* Estilos para el aside (barra lateral) */
+aside {
+    flex: 1;
+    min-width: 250px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 0.5rem;
+}
+
+aside p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+#fondoImagen1 {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(23, 3, 10, 0.1);
+    background: url(../imagenes/download\ \(3\).jpg);
+    background-size: 500px 500px;
+}
+
+#fondoImagen2 {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(23, 3, 10, 0.1);
+    background: url(../imagenes/download.jpg);
+    background-size: 500px 500px;
+}
+
+#fondoImagen3 {
+    width: 1000px;
+    height: 300px;
+    background-color: rgba(23, 3, 10, 0.1);
+    background: url(../imagenes/Cracking\ Up\ Lol\ GIF\ by\ STRAPPED!.gif), url(../imagenes/uncle\ grandpa\ \(2013\).jpg), url(../imagenes/download\ \(1\).jpg);
+
+}
+
+#fondoImagen4 {
+    width: 1000px;
+    height: 300px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: url(../imagenes/laieufhaleufh.jpg);
+    background-size: 500px 500px;
+}
