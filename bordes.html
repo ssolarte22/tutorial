@@ -36,67 +36,92 @@
     </nav>
     <section>
         <h2> Líneas separadoras horizontales </h2>
-
         <article>
             <p>
-                Existen dos formas para crear una línea separadora horizontal y una única forma para crear una línea
-                separadora vertical.
-                Para crear una línea horizontal la forma fácil y rápida es utilizar la etiqueta < hr>, que no se cierra
-                    y que crea una línea horizontal simple.
+                Para crear una línea horizontal, la forma más rápida es usar la etiqueta
+                &lt;hr&gt;, que no se cierra y genera una línea separadora simple.
             </p>
             <p>
-
-                En lo referente a los tipos de bordes existen las siguientes posibilidades:
-                <br><b>none:</b> sin línea.
-                <br><b>solid:</b> con línea continua (valor por defecto).
-                <br><b>dotted:</b> línea punteada.
-                <br><b>dashed</b>: línea discontinua (segmentos cortos de línea).
-                <br><b>inset:</b> línea con el color en bajorelieve.
-                <br><b>outset:</b> línea que simula el relieve.
+                Esta etiqueta puede personalizarse con CSS usando propiedades como:
+                border-width (grosor), border-style (tipo), border-color (color) y width (anchura).
             </p>
-            <h3>Ejemplo </h3>
+            <h3>Ejemplo</h3>
             <hr>
         </article>
+
         <h2> Líneas separadoras verticales </h2>
         <article>
+            <p>
+                Para crear líneas verticales se define uno o varios bordes de una caja
+                &lt;div&gt; con estas propiedades:
+                <br>border-top: 1px solid red;
+                <br>border-bottom: 2px dotted green;
+                <br>border-right: 1px dashed #3C5391;
+                <br>border-left: 1px inset orange;
+            </p>
+            <h3>Ejemplo</h3>
             <div>
-                Para crear líneas verticales tenemos que definir uno de los 4 bordes que tiene una caja (< div>),
-                    utilizando una (o varias) de estas propiedades:
+                Caja de ejemplo con cuatro bordes diferentes.
             </div>
-            <h3>Ejemplo: </h3>
-
         </article>
-        <h2>Bordes simples</h2>
 
+        <h2>Bordes simples</h2>
         <article>
+            <p>
+                Para indicar un borde en un &lt;div&gt; se usa la propiedad border con este formato:
+                border: 2px solid grey;
+            </p>
+            <p>
+                Tipos de borde disponibles:
+                <br><b>none:</b> sin línea.
+                <br><b>solid:</b> línea continua.
+                <br><b>dotted:</b> línea punteada.
+                <br><b>dashed:</b> línea discontinua.
+                <br><b>inset:</b> efecto de bajorrelieve.
+                <br><b>outset:</b> efecto de relieve.
+            </p>
             <div id="borde_redondo">
-                borde redondo
+                Borde simple con tamaño definido y esquinas redondeadas.
             </div>
             <p>
-                <br>width: 300px;
-                <br> height: 100px;
-                <br> border: 3px solid rgb(red, green, blue);
-                <br> border-radius: 22px;
-                <br> padding-left: 15px;
-                <br> padding-top: 30px;
-
+                width: 300px;
+                <br>height: 100px;
+                <br>border: 3px solid rgb(red, green, blue);
+                <br>border-radius: 22px;
+                <br>padding-left: 15px;
+                <br>padding-top: 30px;
             </p>
         </article>
 
         <h2>Bordes redondeados </h2>
         <article>
-            <p>Con la propiedad border-radius tenemos la posibilidad de crear
-            <div> con las esquinas con bordes redondeados, pudiendo especificar la suavidad de las esquinas de manera
-                conjunta o cada una de las esquinas por separado.
+            <p>
+                Con border-radius se pueden redondear las esquinas de un &lt;div&gt;,
+                aplicando un valor único para las cuatro esquinas o valores distintos para cada una.
+            </p>
+            <p>
+                Para que se aprecie el redondeo, es necesario definir también un borde normal
+                (border) y/o un color de fondo (background-color).
+            </p>
+            <p>
+                Orden de los cuatro valores de border-radius:
+                superior-izquierda, superior-derecha, inferior-derecha, inferior-izquierda.
+            </p>
+            <h3>Ejemplo</h3>
+            <div id="borde_diferente">
+                Ejemplo de borde con valores diferentes.
+                <br>border-radius: 10px 0px 39px 22px;
+            </div>
+        </article>
 
-                Para poder visualizar una esquina con borde redondeado, además de la propiedad border-radius, tenemos
-                que definir un borde normal (con border) y/o indicar un color de fondo (con background-color).</p>
-                <h3> Ejemplo </h3>
-
-                <div id="borde_diferente">
-                    Ejemplo de borde diferente
-                    <br>border-radius: 10px 0px 39px 22px;
-                </div>
+        <h2>Ejemplo práctico</h2>
+        <article>
+            <p>
+                El ejemplo completo combina:
+                width y height para el tamaño del &lt;div&gt;, border para el borde,
+                border-radius para suavizar esquinas, background-color para el fondo
+                y padding para separar el texto del borde.
+            </p>
         </article>
     </section>
     <footer></footer>

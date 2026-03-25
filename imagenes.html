@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bordes y Sombras </title>
+    <title>Imagenes </title>
     <link rel="stylesheet" href="css/estilo1.css">
 </head>
 
 <body>
     <header>
-        <h1>Tutorial CSS Bordes y Redondeo </h1>
+        <h1>Tutorial CSS Imágenes </h1>
     </header>
     <nav>
         <ul>
@@ -35,39 +35,82 @@
         </ul>
     </nav>
     <section>
-        <h2> Imagenes </h2>
+        <h2> Imágenes de fondo </h2>
 
         <article>
-            <p>En HTML5 existen algunas propiedades CSS que nos permiten añadir fondos de página, ya sea de un simple
-                color (opaco o
-                con transparencia), una imagen o múltiples imágenes una encima de la otra.
-                Color de fondo</p>
-
+            <h3>Las palabras mágicas</h3>
+            <p>
+                En HTML5 podemos añadir fondos con un color sólido, un color semitransparente,
+                una imagen o varias imágenes superpuestas.
+            </p>
             <h4>Color de fondo</h4>
-            <p>Para especificar un color de fondo, ya sea para todo el html, o sólo para un
-            <div> o sección del html utilizamos la
-                propiedad background-color:</p>
-                <h3>Ejemplo</h3>
-
-                <div id="fondoImagen1">
-                    [0.1 - 0.9] es el valor de transparencia, siendo 0 completamente transparente y 1 completamente
-                    opaco.
-
-                </div>
-        </article>
-
-        <article>
-            <div id="fondoImagen2">
+            <p>
+                Para aplicar un color de fondo a toda la página o a un &lt;div&gt; se usa:
+                background-color.
+            </p>
+            <h4>Color de fondo semitransparente</h4>
+            <p>
+                Con rgba(r, g, b, a) el cuarto valor es la opacidad:
+                0 = totalmente transparente y 1 = totalmente opaco.
+            </p>
+            <h4>Imagen de fondo</h4>
+            <p>
+                Para colocar una imagen se usa background con url(...).
+                Si no se indica nada más, la imagen se repite en mosaico.
+                También es importante recordar que la ruta depende de dónde está el CSS.
+            </p>
+            <h4>Repetición de la imagen</h4>
+            <p>
+                background-repeat permite controlar la repetición:
+                <br><b>no-repeat:</b> no se repite.
+                <br><b>repeat-x:</b> se repite en horizontal.
+                <br><b>repeat-y:</b> se repite en vertical.
+            </p>
+            <h4>Tamaño de la imagen</h4>
+            <p>
+                background-size permite ajustar dimensiones en píxeles o porcentaje,
+                por ejemplo: 200px 100px o 25%.
+            </p>
+            <h3>Ejemplo</h3>
+            <div id="fondoImagen1">
+                Ejemplo con color de fondo semitransparente e imagen de fondo.
             </div>
         </article>
 
+        <h2>Superposición de múltiples imágenes como fondo</h2>
         <article>
+            <p>
+                En CSS3 se pueden apilar varias imágenes en un mismo fondo separándolas por comas.
+                El orden importa: la primera imagen queda por encima y la última por debajo.
+            </p>
+            <p>
+                Esta técnica funciona mejor cuando las capas superiores tienen zonas transparentes,
+                para permitir ver las imágenes inferiores.
+            </p>
+            <h3>Ejemplo</h3>
             <div id="fondoImagen3">
+                Superposición de 3 fondos (la primera imagen queda encima).
             </div>
         </article>
 
+        <h2>Extras</h2>
         <article>
+            <h3>Fondo fijo</h3>
+            <p>
+                background-attachment: fixed permite que el fondo no se mueva al hacer scroll.
+            </p>
+            <h3>Fondo adaptable al contenedor</h3>
+            <p>
+                Para adaptar un fondo al tamaño del contenedor se suele usar:
+                background-repeat: no-repeat y background-size: cover.
+            </p>
+            <h3>Ejemplos</h3>
+            <div id="fondoImagen2">
+                Fondo con repetición vertical (repeat-y).
+            </div>
+            <br>
             <div id="fondoImagen4">
+                Fondo fijo y adaptable con cover.
             </div>
         </article>
     </section>

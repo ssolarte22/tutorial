@@ -35,63 +35,77 @@
         </ul>
     </nav>
     <section>
-        <h2>Sombras de < div> (cajas)</h2>
+        <h2>Sombras de &lt;div&gt; (cajas)</h2>
         <article>
+            <p>
+                Con CSS3 podemos crear sombras para zonas del HTML (&lt;div&gt;, &lt;article&gt;,
+                &lt;footer&gt;, &lt;header&gt;...) y también para textos.
+                Para cajas se usa la propiedad <b>box-shadow</b>.
+            </p>
+            <p>
+                Sintaxis básica:
+                <br>box-shadow: 6px 20px 10px black;
+            </p>
+            <ul>
+                <li>El primer valor indica el desplazamiento horizontal.</li>
+                <li>El segundo valor indica el desplazamiento vertical.</li>
+                <li>El tercer valor define la suavidad de la sombra.</li>
+                <li>El último valor corresponde al color.</li>
+            </ul>
             <h3>Ejemplo</h3>
             <div id="sombra">
-                Con HTML5 podemos crear de una manera sencilla tanto sombras para zonas del HTML
-                (< div>, < article>, < footer>, < header>...), como para textos. Aunque cada uno de estos tipos de
-                                sombra tiene su propia etiqueta, la sintaxis sigue la misma lógica.
-                                Así, en el caso de la sombra aplicada a < div>, zonas o secciones del html utilizamos la
-                                    propiedad box-shadow.
+                Ejemplo de sombra externa con box-shadow.
             </div>
 
             <br>
 
             <h4>Sombras internas</h4>
-
-            <p>Para crear sombras internas únicamente tenemos que añadir el valor inset al final de 'box-shadow':</p>
-
+            <p>
+                Para crear una sombra interna se añade el valor <b>inset</b> al final:
+                <br>box-shadow: 7px 20px 10px black inset;
+            </p>
             <h3>Ejemplo</h3>
-
-            <div id="sombra_interna"> sombra interna</div>
-
-            <ul>
-                <li>7px, indica el número de pixeles que se desviará la sobra horizontalmente</li>
-                <li>20px, indica el número de pixeles que se desviará la sombra verticalmente</li>
-                <li>10px, indica el radio del desenfoque</li>
-                <LI> color </LI>
-
-            </ul>
+            <div id="sombra_interna">Sombra interna</div>
         </article>
-        <h2> Creación de 'halos' o 'resplandores' </h2>
+
+        <h2>Creación de halos o resplandores</h2>
         <article>
-            <p>Para crear un halo o resplandor que rodee una caja o el < div> que corresponda indicamos '0px' en los dos
-                    primeros
-                    valores y especificamos el color del resplandor.</p>
+            <p>
+                Para crear un halo alrededor de una caja se usan 0px en los dos primeros valores
+                y se define el color del resplandor:
+                <br>box-shadow: 0px 0px 30px blue;
+            </p>
             <h3>Ejemplo</h3>
-            <div id="halo">resplandor</div>
-
-
+            <div id="halo">Resplandor</div>
         </article>
+
         <h2>Sombras en textos</h2>
         <article>
-            <p>En el caso de las sombras en textos utilizamos la etiqueta 'text-shadow', que funciona exactamente igual
-                que
-                'box-shadow':</p>
-
+            <p>
+                Para textos se utiliza <b>text-shadow</b>, con la misma lógica que box-shadow:
+                <br>text-shadow: 10px 10px 5px gray;
+            </p>
+            <ul>
+                <li>Primer valor: separación horizontal de la sombra.</li>
+                <li>Segundo valor: separación vertical de la sombra.</li>
+                <li>Tercer valor: suavidad de la sombra.</li>
+                <li>Último valor: color de la sombra.</li>
+            </ul>
             <h3>Ejemplo</h3>
-
             <p id="sombra_texto">Quisiera ser el six de tu seven</p>
         </article>
+
         <h2>Múltiples sombras en el mismo elemento</h2>
         <article>
-            <p>Para crear múltiples sombras en el mismo elemento, ya sea un texto o una caja, simplemente tenemos que
-                separar cada sombra con una coma:</p>
-
+            <p>
+                Para aplicar varias sombras en un mismo elemento, se separan con comas:
+                <br>box-shadow: 0px 0px 20px red inset, 0px 0px 25px blue;
+            </p>
+            <p>
+                En este ejemplo, la primera sombra es interna (inset) y la segunda es externa.
+            </p>
             <h3>Ejemplo</h3>
-
-            <div id="sombra_multiple"> Múltiples sombras </div>
+            <div id="sombra_multiple">Múltiples sombras</div>
         </article>
     </section>
     <footer></footer>

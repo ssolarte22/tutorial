@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas flotantes</title>
+    <link rel="stylesheet" href="css/estilo1.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial CSS Cajas flotantes</h1>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="bordes.html"> Bordes </a> </li>
+            <li> <a href="sombras.html"> Sombras </a> </li>
+            <li> <a href="imagenes.html"> Imagenes </a> </li>
+            <li> <a href="cajas.html"> Cajas </a> </li>
+            <li> <a href="Posicion.html"> Posicion </a> </li>
+            <li> <a href="Transformacion.html"> Transformacion </a> </li>
+            <li> <a href="Formularios.html"> Formularios </a> </li>
+            <li> <a href="iframe.html"> iframe </a> </li>
+            <li> <a href="Transiciones.html"> Transiciones </a> </li>
+            <li> <a href="Columnas.html"> Columnas </a> </li>
+            <li> <a href="Video.html"> Video </a> </li>
+            <li> <a href="Audio.html"> Audio </a> </li>
+            <li> <a href="transparencias.html"> Transparencias </a> </li>
+            <li> <a href="Animacion.html"> Animacion </a> </li>
+            <li> <a href="SVG.html"> SVG </a> </li>
+            <li> <a href="Responsive.html"> Responsive </a> </li>
+            <li> <a href="Contenidoeditable.html"> Contenido editable </a> </li>
+            <li> <a href="Storage.html"> Storage </a> </li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Cajas flotantes (float)</h2>
+
+        <article>
+            <h3>Uso de float</h3>
+            <p>
+                La propiedad float sirve para alinear cajas o &lt;div&gt; a la izquierda o a la derecha.
+                Los valores más usados son float:left y float:right.
+            </p>
+            <p>
+                Para alinear varias cajas una junto a otra, todas deben tener un width definido y usar float.
+                Además, la suma de sus anchos debe caber en el contenedor.
+            </p>
+            <p>
+                Si después de cajas flotantes se añade otro elemento, este puede ocupar el hueco libre.
+                Para evitarlo se usa clear:both en la siguiente caja.
+            </p>
+            <h4>Reglas importantes</h4>
+            <ul>
+                <li>Todas las cajas alineadas deben tener width + float.</li>
+                <li>Si no caben en el ancho disponible, bajarán a la siguiente línea.</li>
+                <li>Normalmente se usa la misma dirección de float para el grupo.</li>
+                <li>clear:both evita que un elemento se desplace al hueco libre.</li>
+                <li>Si quieres colocar dos cajas seguidas, normalmente se usa float:left en ambas.</li>
+            </ul>
+        </article>
+
+        <h2>Ejemplo práctico del uso de float</h2>
+        <article>
+            <p>
+                En este ejemplo se usan dos cajas flotantes una al lado de la otra,
+                con width definido y float:left.
+            </p>
+
+            <h4>Codigo CSS</h4>
+            <pre>
+
+                #caja1{
+                    width:200px;
+                    float:left;
+                    margin-right:15px;
+                }
+                #caja2{
+                    width:200px;
+                    float:left;
+                }
+            </pre>
+
+            <h4>Codigo HTML</h4>
+            <pre>
+
+                &lt;div id="cajas"&gt;
+                    &lt;div id="caja1"&gt;
+                    &lt;/div&gt;
+
+                    &lt;div id="caja2"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </pre>
+
+            <br>
+
+            <div id="cajas">
+                <div id="caja1">
+                    <h4>Clinica dental</h4>
+                    <p>Atencion personalizada</p>
+                    <p>Materiales de calidad</p>
+                    <p>Precios competitivos</p>
+                </div>
+                <div id="caja2">
+                    <h4>Dentista economico</h4>
+                    <p>Grandes ofertas</p>
+                    <p>Sin listas de espera</p>
+                    <p>Quirofano disponible</p>
+                </div>
+            </div>
+
+            <div id="caja_descolocada">
+                Este bloque aparece despues de las cajas flotantes y sirve para mostrar
+                por que clear:both es necesario.
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <h4>Codigo CSS para corregirlo</h4>
+            <pre>
+
+                #caja_descolocada{
+                    clear:both;
+                }
+            </pre>
+        </article>
+
+        <h2>clear:both</h2>
+
+        <article>
+            <p>
+                La forma rapida de corregir desplazamientos tras usar float es aplicar clear:both
+                al primer bloque que viene despues de las cajas flotantes.
+            </p>
+            <h3>Ejemplo corregido</h3>
+
+            <div id="cajas">
+                <div id="caja1">
+                    <h4>Clinica dental</h4>
+                    <p>Atencion personalizada</p>
+                    <p>Materiales de calidad</p>
+                    <p>Precios competitivos</p>
+                </div>
+                <div id="caja2">
+                    <h4>Dentista economico</h4>
+                    <p>Grandes ofertas</p>
+                    <p>Sin listas de espera</p>
+                    <p>Quirofano disponible</p>
+                </div>
+            </div>
+
+            <div id="caja_corregida">
+                Este bloque ya se coloca correctamente debajo gracias a clear:both.
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <h4>Alternativa con contenedor</h4>
+            <p>
+                Otra solucion elegante es meter las cajas flotantes dentro de un contenedor
+                con altura definida.
+            </p>
+
+            <br>
+
+            <h4>Codigo HTML</h4>
+            <pre>
+
+                &lt;div id="cajas"&gt;
+                    &lt;div id="caja1"&gt;
+                &lt;/div&gt;
+
+                &lt;div id="caja2"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </pre>
+
+            <h4>Codigo CSS</h4>
+            <pre>
+
+                #cajas{
+                height:131px;
+                }
+                
+                #caja1{
+                width:395px;
+                float:left;
+                margin-right:15px;
+                }
+
+                #caja2{
+                width:300px;
+                float:left;
+                }
+            </pre>
+        </article>
+    </section>
+
+    <footer></footer>
+</body>
+
+</html>
