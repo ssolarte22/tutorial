@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arquitectura Frontend</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        /* Texto en movimiento simple */
+        .texto-movil {
+            display: inline-block;
+            white-space: nowrap;
+            animation: mover 7s linear infinite;
+        }
+
+        @keyframes mover {
+            from {
+                transform: translateX(-10%);
+            }
+
+            to {
+                transform: translateX(80%);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- HEADER con banner/hero -->
+    <header class="bg-primary text-white py-5 text-center">
+        <div class="container">
+            <h1>Arquitectura Frontend</h1>
+            <p class="lead mb-0">Bases para crear interfaces web modernas</p>
+        </div>
+    </header>
+
+    <!-- NAV con exactamente 3 items -->
+    <nav class="bg-white border-bottom">
+        <div class="container py-3">
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Arquitecturas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Tecnologías</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+
+        <!-- Texto en movimiento -->
+        <div class="bg-warning-subtle border rounded p-2 mb-4 overflow-hidden">
+            <span class="texto-movil fw-bold">Aprender frontend es construir experiencias visuales claras y
+                útiles.</span>
+        </div>
+
+        <!-- Carousel 3 slides -->
+        <div id="carouselFrontend" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselFrontend" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselFrontend" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselFrontend" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                    <div class="p-5 bg-info-subtle text-center">
+                        <h5>HTML: Estructura</h5>
+                        <p class="mb-0">Organiza títulos, textos, imágenes y formularios.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="p-5 bg-success-subtle text-center">
+                        <h5>CSS: Diseño</h5>
+                        <p class="mb-0">Da estilo, color, espaciado y mejor presentación visual.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="p-5 bg-danger-subtle text-center">
+                        <h5>JavaScript: Interacción</h5>
+                        <p class="mb-0">Permite acciones dinámicas como validaciones y eventos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFrontend" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselFrontend" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <!-- SECTION con exactamente 3 artículos -->
+        <section class="row g-4">
+
+            <!-- Article 1 -->
+            <article class="col-12 col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h5">¿Qué es la arquitectura frontend?</h2>
+                        <p class="mb-0">
+                            Es la forma de organizar el código visual de una aplicación web para que sea clara,
+                            mantenible y fácil de mejorar.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 con acordeón -->
+            <article class="col-12 col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h5">Arquitecturas Web (Acordeón)</h2>
+
+                        <div class="accordion" id="acordeonArquitectura">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#itemUno">
+                                        SSR (Renderizado del lado del servidor)
+                                    </button>
+                                </h2>
+                                <div id="itemUno" class="accordion-collapse collapse show"
+                                    data-bs-parent="#acordeonArquitectura">
+                                    <div class="accordion-body">
+                                        El servidor genera la página y la envía lista al navegador. Mejora la carga
+                                        inicial y el SEO.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#itemDos">
+                                        CSR (Renderizado del lado del cliente)
+                                    </button>
+                                </h2>
+                                <div id="itemDos" class="accordion-collapse collapse"
+                                    data-bs-parent="#acordeonArquitectura">
+                                    <div class="accordion-body">
+                                        El navegador construye la interfaz usando JavaScript. Da una experiencia
+                                        dinámica tipo SPA.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 con tabla -->
+            <article class="col-12 col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h5">Comparación básica</h2>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>Tecnología</th>
+                                        <th>Función principal</th>
+                                        <th>Ejemplo de uso</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>HTML</td>
+                                        <td>Estructura</td>
+                                        <td>Títulos y párrafos</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CSS</td>
+                                        <td>Estilo visual</td>
+                                        <td>Colores y márgenes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>JavaScript</td>
+                                        <td>Interactividad</td>
+                                        <td>Botones con eventos</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p class="mb-0">Página educativa de Arquitectura Frontend - 2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

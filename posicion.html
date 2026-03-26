@@ -37,10 +37,95 @@
     </nav>
 
     <section>
+        <h2>Centrar las cajas en la página</h2>
         <article>
 
+            <p>Uno de los mayores dolores de cabeza es el posicionamiento de bloques (
+                &lt;div&gt;, &lt;section&gt;, &lt;header&gt;, &lt;aside&gt;, etc..) en
+                una ubicación determinada sin que éstos se muevan o descoloquen por cualquier cambio en el
+                contenido
+                anterior o posterior.
+            </p>
+            <p>
+                Para ello, vamos a ver algunos aspectos a tener en cuenta:
+            </p>
+            <p>
+                1. Primero vamos a partir de un ancho global fijo de la página, que en este ejemplo será de
+                1000
+                píxeles. A partir de esta medida general (del
+
+                body) el resto de bloques se centrarán según su propia anchura.
+
+                En el CSS definimos la anchura del
+
+                body y el posterior centrado de los bloques que contenga el
+
+                body (que serán todos):
+            </p>
+            <pre>
+
+                body {
+                    width: 1000px;
+                    margin: 0 auto;
+                }
+            </pre>
+
+            <p>Los dos valores de la etiqueta margin son, el primero (0px) la separación o margen superior que tendrá el
+                primer bloque
+                respecto al borde superior de la página y la separación que tendrá el último bloque del
+
+                &lt;body&gt; respecto al límite inferior, mientras que el valor auto indica que todos los bloques del
+
+                &lt;body&gt; tendrán un margen horizontal automático y que por lo tanto estarán centrados (aunque OJO no
+                necesariamente su
+                contenido).
+            </p>
+
         </article>
+        <h2>Ejemplo práctico de centrado</h2>
         <article>
+            <p>
+                Para verlo a través de un ejemplo práctico vamos a suponer que tenemos dentro del
+                body tres bloques o divs (a los que les pondremos un fondo de color para poder ver su tamaño).
+            </p>
+
+            <p id="texto_identado">El primer bloque tiene un contenido formado por varias líneas de texto.
+                El segundo está compuesto por una imagen y un texto (alineados con img .... align="center")
+                El último está formado por varios bloques alineados con float:left;
+            </p>
+
+            <p>
+                Con el código CSS del apartado anterior, estos tres bloques están centrados respecto al
+                body, aunque no el contenido que contienen. Es decir, las cajas están centradas en la
+                ventana del navegador, pero lo correcto sería que el contenido que contiene cada una
+                de las cajas o bloques también estuviera centrado dentro de la propia caja.
+            </p>
+
+            <div id="div_gris">
+
+                <div id="div_azul1">
+                    <p> Bloque 1 </p>
+                    <p>Este bloque (o &lt;div&gt;) contiene varias líneas de texto
+                        <br>
+                        Estas dos líneas están separadas entre sí utilizando las etiquetas &lt;br&gt; y &lt;p&gt;,
+                        ambas están contenidas dentro del mismo
+                        &lt;div&gt;.
+                    </p>
+                </div>
+
+                <div id="div_azul2">
+                    <p> Bloque 2</p>
+                    <img src="imagenes/download (1).jpg" align="center" width="30%" height="30%">
+                </div>
+
+                <div id="div_azul3">
+                    <p> Bloque 3 (contiene dos &lt;divs&gt; ubicados con float:left)</p>
+                    <img src="imagenes/download (1).jpg" align="center" width="30%" height="30%">
+                    <img src="imagenes/download (1).jpg" align="center" width="30%" height="30%">
+                </div>
+
+            </div>
+
 
         </article>
         <article>
