@@ -37,14 +37,47 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Contenido Editable (contenteditable)</h2>
 
+        <article>
+            <h3>1) ¿Qué es contenteditable?</h3>
+            <p>
+                El atributo global <strong>contenteditable</strong> en HTML5 permite a los usuarios modificar el texto de los elementos HTML directamente desde la página, sin necesidad de usar inputs heredados como <code>&lt;textarea&gt;</code>.
+            </p>
+            <p>
+                Basta con añadir <code>contenteditable="true"</code> a casi cualquier etiqueta (div, p, span, li) para convertirla en una zona editable al estilo de un procesador de textos.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Demo: Bloque editable interactivo</h3>
+            <p>
+                Haz clic en el recuadro a continuación y edita el texto. Notarás que el navegador te permite añadir líneas e incluso maneja comandos básicos si usas atajos (como Ctrl+B para negrita, dependiendo del navegador).
+            </p>
+            <div class="editable_box" contenteditable="true">
+                <b>¡Hola!</b> Haz clic aquí y empieza a escribir. Este div tiene el atributo de contenido editable activado.
+            </div>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Demo: Lista editable</h3>
+            <p>
+                También puedes aplicarlo a listas. Aquí tienes una lista de tareas donde puedes modificar cada ítem:
+            </p>
+            <ul contenteditable="true" class="editable_list">
+                <li>Comprar pan</li>
+                <li>Pasear al perro</li>
+                <li>Estudiar HTML5</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>4) Aplicaciones reales</h3>
+            <ul>
+                <li><strong>Editores WYSIWYG:</strong> Es la tecnología base para creadores de contenido (como WordPress, editores de correos, etc.).</li>
+                <li><strong>Edición In-line:</strong> Permite a los usuarios actualizar datos de su perfil o configuraciones haciendo clic directo, mejorando la experiencia de usuario.</li>
+                <li>Para guardar los cambios, se requiere <strong>JavaScript</strong>. Escuchando los eventos <code>blur</code> o <code>input</code>, puedes recolectar el HTML interno del bloque y mandarlo a tu servidor o guardarlo en <em>Storage</em>.</li>
+            </ul>
         </article>
     </section>
     <footer>

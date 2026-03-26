@@ -37,14 +37,93 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Animaciones con CSS (animation)</h2>
 
+        <article>
+            <h3>1) Que es una animacion en CSS</h3>
+            <p>
+                Una animacion en CSS permite cambiar el estado visual de un elemento sin depender de JavaScript.
+                A diferencia de <strong>transition</strong>, la animacion puede reproducirse automaticamente al
+                cargar la pagina y puede repetirse indefinidamente.
+            </p>
+            <p>
+                Las dos piezas clave son:
+            </p>
+            <ul>
+                <li><strong>@keyframes</strong>: define los pasos del movimiento o efecto.</li>
+                <li><strong>animation</strong>: aplica esos pasos a un elemento concreto.</li>
+            </ul>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Sintaxis basica</h3>
+            <pre>
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.caja {
+  animation: aparecer 1s ease-out 0s 1 normal forwards;
+}
+            </pre>
+            <p>
+                Orden habitual de la propiedad <strong>animation</strong>:
+                <em>nombre duracion timing-function delay iteraciones direccion fill-mode</em>.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Demo: rebote continuo</h3>
+            <p>
+                Este bloque usa una animacion infinita para mostrar como funciona
+                <strong>animation-iteration-count</strong>
+                con valor <strong>infinite</strong>.
+            </p>
+            <div id="anim_bounce_box">Rebote</div>
+        </article>
+
+        <article>
+            <h3>4) Demo: giro con retardo</h3>
+            <p>
+                Aqui se aplica un retardo inicial para visualizar <strong>animation-delay</strong>.
+            </p>
+            <div id="anim_spin_box">Giro</div>
+        </article>
+
+        <article>
+            <h3>5) Demo: barra de progreso</h3>
+            <p>
+                Esta demo muestra una animacion de izquierda a derecha. Se usa
+                <strong>animation-fill-mode: forwards</strong> para conservar el estado final.
+            </p>
+            <div id="anim_progress_track">
+                <div id="anim_progress_bar"></div>
+            </div>
+        </article>
+
+        <article>
+            <h3>6) Propiedades mas importantes</h3>
+            <ul>
+                <li><strong>animation-name</strong>: nombre de la secuencia @keyframes.</li>
+                <li><strong>animation-duration</strong>: tiempo total de una vuelta.</li>
+                <li><strong>animation-timing-function</strong>: velocidad (linear, ease, ease-in-out...).</li>
+                <li><strong>animation-delay</strong>: espera antes de iniciar.</li>
+                <li><strong>animation-iteration-count</strong>: numero de repeticiones o infinite.</li>
+                <li><strong>animation-direction</strong>: normal, reverse, alternate, alternate-reverse.</li>
+                <li><strong>animation-fill-mode</strong>: controla estilos antes/despues (none, forwards, backwards,
+                    both).</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>7) Recomendaciones practicas</h3>
+            <ul>
+                <li>Anima preferentemente <strong>transform</strong> y <strong>opacity</strong> por rendimiento.</li>
+                <li>Evita animaciones demasiado largas o agresivas en interfaces de lectura.</li>
+                <li>Usa duraciones coherentes: entre 200ms y 1200ms para la mayoria de casos UI.</li>
+                <li>Combina animation para secuencias automaticas y transition para interaccion con hover/focus.</li>
+            </ul>
         </article>
     </section>
     <footer>

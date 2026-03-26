@@ -37,14 +37,52 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Imágenes vectoriales asombrosas (SVG)</h2>
 
+        <article>
+            <h3>1) ¿Qué es SVG?</h3>
+            <p>
+                SVG (Scalable Vector Graphics) es un formato de imagen vectorial basado en XML. 
+                A diferencia de los formatos de píxeles (como JPG o PNG), un SVG no pierde calidad al ampliarse,
+                pesa muy poco si es simple, y puede ser manipulado directamente con CSS y JavaScript.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Formas básicas</h3>
+            <p>
+                Puedes dibujar formas directamente escribiendo código HTML dentro de la etiqueta <code>&lt;svg&gt;</code>.
+                Las más comunes son <code>&lt;rect&gt;</code> (rectángulo), <code>&lt;circle&gt;</code> (círculo), y <code>&lt;polygon&gt;</code>.
+            </p>
+            <div class="svg_demo">
+                <svg width="200" height="100">
+                    <rect x="10" y="10" width="80" height="80" fill="#3498db" />
+                    <circle cx="150" cy="50" r="40" fill="#e74c3c" />
+                </svg>
+            </div>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Manipulación con CSS</h3>
+            <p>
+                Un aspecto poderoso del SVG en línea es que responde a CSS. Puedes modificar atributos como 
+                <code>fill</code> (color de fondo) y <code>stroke</code> (color de borde) en tu archivo <em>.css</em> o al pasar el ratón por encima (hover).
+            </p>
+            <div class="svg_demo_css">
+                <svg width="150" height="150">
+                    <polygon points="75,10 140,140 10,140" class="mi_triangulo" />
+                </svg>
+                <p>Pasa el ratón por encima del triángulo.</p>
+            </div>
+        </article>
+
+        <article>
+            <h3>4) Uso práctico</h3>
+            <ul>
+                <li><strong>Iconos:</strong> Los SVG son el estándar actual para pintar iconos (ej. FontAwesome, Material Icons).</li>
+                <li><strong>Logos:</strong> Mantienen la identidad de marca nítida tanto en un móvil pequeño como en una pantalla 4K.</li>
+                <li><strong>Animaciones vectoriales:</strong> Puedes combinar SVG y las <code>@keyframes</code> de CSS para animar contornos y figuras de forma fluida.</li>
+            </ul>
         </article>
     </section>
     <footer>

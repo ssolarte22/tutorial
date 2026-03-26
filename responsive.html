@@ -37,14 +37,65 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Responsive Design (Media Queries)</h2>
 
+        <article>
+            <h3>1) ¿Qué es el Diseño Responsivo?</h3>
+            <p>
+                El diseño responsivo asegura que tu página web se vea bien y sea funcional en todos los dispositivos
+                (teléfonos móviles, tablets, pantallas de escritorio).
+                Esto se logra evitando anchos fijos (como <code>width: 800px;</code>) a favor de porcentajes
+                (<code>width: 100%;</code>) y utilizando <strong>Media Queries</strong>.
+            </p>
+            <p>
+                Además, es obligatorio incluir la etiqueta meta de viewport en el <code>&lt;head&gt;</code> de tu
+                documento:
+                <br><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Media Queries (@media)</h3>
+            <p>
+                Una media query permite aplicar reglas CSS solamente si el navegador cumple cierta condición,
+                generalmente el ancho de la pantalla (<code>max-width</code> o <code>min-width</code>).
+            </p>
+            <pre>
+/* Si el ancho de la pantalla es menor o igual a 768px: */
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+            </pre>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Demo: Rejilla adaptativa</h3>
+            <p>
+                A continuación hay 3 cajas. En monitores grandes se mostrarán en una fila (usando CSS Flexbox o Grid).
+                <strong>Si reduces el ancho de tu navegador</strong>, o lo ves desde un móvil, las cajas se apilarán
+                verticalmente.
+                ¡Prueba a cambiar el tamaño de la ventana!
+            </p>
+            <div class="responsive_grid">
+                <div class="resp_box">Caja 1</div>
+                <div class="resp_box">Caja 2</div>
+                <div class="resp_box">Caja 3</div>
+            </div>
+        </article>
+
+        <article>
+            <h3>4) Uso de max-width en imágenes</h3>
+            <p>
+                Para evitar que una imagen se salga de su contenedor en pantallas pequeñas, la regla de oro es
+                aplicarle:
+                <code>max-width: 100%; height: auto;</code>
+            </p>
+            <div class="responsive_img_demo">
+                <!-- Se podría poner una imagen de prueba aquí -->
+                <div class="fake_img">Imagen Simulada 100%</div>
+            </div>
         </article>
     </section>
     <footer>

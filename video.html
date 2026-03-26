@@ -37,14 +37,56 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Insertar Vídeo en HTML5</h2>
 
+        <article>
+            <h3>1) La etiqueta &lt;video&gt;</h3>
+            <p>
+                Al igual que el audio, HTML5 introdujo la etiqueta <code>&lt;video&gt;</code> para reproducir archivos multimedia 
+                sin depender de Flash Player u otros plugins externos.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Sintaxis y Formatos</h3>
+            <p>
+                Para garantizar la compatibilidad con todos los navegadores, debes ofrecer distintos formatos usando 
+                la etiqueta <code>&lt;source&gt;</code>. Los formatos web más aceptados son <strong>MP4</strong>, <strong>WebM</strong> y <strong>Ogg</strong>.
+            </p>
+            <pre>
+&lt;video controls poster="img/portada.jpg"&gt;
+  &lt;source src="videos/clip.mp4" type="video/mp4"&gt;
+  &lt;source src="videos/clip.webm" type="video/webm"&gt;
+  Tu navegador no soporta vídeo HTML5.
+&lt;/video&gt;
+            </pre>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Demo: Reproductor nativo</h3>
+            <p>
+                Este reproductor incluye varias de las propiedades básicas (controls, muted, y un poster).
+                El atributo <code>poster</code> es una imagen que se muestra antes de darle al Play.
+            </p>
+            <div class="video_demo_box">
+                <video controls muted poster="imagenes/download.jpg">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                    Tu navegador no soporta HTML5 video.
+                </video>
+            </div>
+        </article>
+
+        <article>
+            <h3>4) Atributos Clave</h3>
+            <ul>
+                <li><strong>controls:</strong> Muestra la barra de reproducción (play, volumen, pantalla completa).</li>
+                <li><strong>autoplay:</strong> Inicia el vídeo automáticamente al cargar. <em>Aviso: los navegadores solo suelen permitirlo si el video tiene el atributo `muted`.</em></li>
+                <li><strong>loop:</strong> Reinicia el vídeo automáticamente cuando termina.</li>
+                <li><strong>muted:</strong> El vídeo arranca sin sonido.</li>
+                <li><strong>poster="url":</strong> Muestra una miniatura de portada en lugar del primer frame negro.</li>
+                <li><strong>preload:</strong> Establece si se carga metadata, nada (none) o automático (auto) antes de reproducir.</li>
+            </ul>
         </article>
     </section>
     <footer>

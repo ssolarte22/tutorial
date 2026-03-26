@@ -37,14 +37,56 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Transformaciones CSS (transform)</h2>
 
+        <article>
+            <h3>1) ¿Qué es transform?</h3>
+            <p>
+                La propiedad <strong>transform</strong> de CSS3 te permite modificar el espacio de coordenadas de un
+                elemento para
+                trasladarlo (moverlo), rotarlo, escalarlo, o sesgarlo (deformarlo). A diferencia de cambiar el
+                <em>margin</em> o <em>top/left</em>,
+                las transformaciones están aceleradas por hardware (GPU) y no afectan el flujo o la posición de los
+                elementos adyacentes.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Las funciones principales</h3>
+            <ul>
+                <li><strong>translate(x, y):</strong> Mueve el elemento por los ejes horizontal y vertical. (Ej.
+                    <code>translate(50px, 100px)</code>)</li>
+                <li><strong>scale(x, y):</strong> Altera el tamaño del elemento. El 1 es el tamaño original. (Ej.
+                    <code>scale(1.5)</code> aumenta un 50%)</li>
+                <li><strong>rotate(angle):</strong> Gira el elemento según los grados indicados. (Ej.
+                    <code>rotate(45deg)</code>)</li>
+                <li><strong>skew(x-angle, y-angle):</strong> Inclina el elemento. (Ej. <code>skew(20deg, 10deg)</code>)
+                </li>
+            </ul>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Demo: Interacción al pasar el ratón (Hover)</h3>
+            <p>
+                Pasa el ratón por encima de cada caja para ver la transformación aplicada de manera suave (gracias a
+                <code>transition</code>).
+            </p>
+            <div class="transform_grid">
+                <div class="tf_box box_translate">Translate Y</div>
+                <div class="tf_box box_scale">Scale</div>
+                <div class="tf_box box_rotate">Rotate</div>
+                <div class="tf_box box_skew">Skew</div>
+            </div>
+        </article>
+
+        <article>
+            <h3>4) Transform-origin</h3>
+            <p>
+                Por defecto, el punto desde el cual se calcula la transformación es el <strong>centro</strong> exacto
+                del elemento (`50% 50%`).
+                Si deseas que, por ejemplo, un elemento rote sujetado desde la esquina superior izquierda, utilizarías:
+                <br><code>transform-origin: top left;</code>
+            </p>
         </article>
     </section>
     <footer>

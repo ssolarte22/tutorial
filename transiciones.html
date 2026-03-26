@@ -37,14 +37,66 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Transiciones (transition)</h2>
 
+        <article>
+            <h3>1) ¿Qué es una transición de CSS?</h3>
+            <p>
+                Las transiciones permiten que los cambios en los valores de las propiedades CSS ocurran sin problemas
+                durante una duración especificada, en lugar de ocurrir de manera instantánea. Suelen utilizarse junto
+                con pseudo-clases como <code>:hover</code> y <code>:focus</code> para crear interfaces interactivas.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Sintaxis y Propiedades</h3>
+            <p>
+                Para crear una transición, necesitas especificar al menos dos cosas:
+            </p>
+            <ul>
+                <li><strong>transition-property:</strong> El nombre de la propiedad CSS a la que deseas aplicar el
+                    efecto (ej: <code>background-color</code>, <code>width</code>, o <code>all</code>).</li>
+                <li><strong>transition-duration:</strong> La duración del efecto (ej: <code>2s</code> o
+                    <code>500ms</code>).</li>
+            </ul>
+            <p>Atributos opcionales muy útiles:</p>
+            <ul>
+                <li><strong>transition-timing-function:</strong> Controla la aceleración de la transición
+                    (<code>ease</code>, <code>linear</code>, <code>ease-in-out</code>).</li>
+                <li><strong>transition-delay:</strong> Retraso antes de que comience la transición.</li>
+            </ul>
+            <pre>
+/* Shorthand o forma corta: */
+.elemento {
+  transition: all 0.3s ease-in-out;
+}
+            </pre>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Demo: Transición de Color y Ancho</h3>
+            <p>
+                Pasa el cursor sobre el botón a continuación. Su color de fondo y su ancho cambian,
+                pero lo hacen de forma suave en un lapso de 0.5 segundos debido a la propiedad <code>transition</code>.
+            </p>
+            <div class="trans_demo_box">
+                <button class="btn_transicion">Pasa el ratón aquí</button>
+            </div>
+        </article>
+
+        <article>
+            <h3>4) Demo: Timing Functions</h3>
+            <p>
+                Aquí vemos cómo diferentes curvas de aceleración (Timing Functions) afectan la velocidad de un elemento
+                al cambiar su posición (usando <code>transform: translateX</code>).
+            </p>
+            <div class="trans_timing_track">
+                <div class="trans_runner linear">linear</div>
+                <div class="trans_runner ease">ease</div>
+                <div class="trans_runner ease-in">ease-in</div>
+                <div class="trans_runner ease-out">ease-out</div>
+            </div>
+            <p><em>(Haz hover sobre esta caja gris para iniciar la carrera)</em></p>
         </article>
     </section>
     <footer>

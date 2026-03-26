@@ -37,14 +37,96 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Almacenamiento Local (Web Storage)</h2>
 
+        <article>
+            <h3>1) ¿Qué es el Web Storage API?</h3>
+            <p>
+                HTML5 introdujo una forma mucho más limpia y potente de guardar datos en el navegador del usuario en
+                comparación con las antiguas cookies.
+                Permite almacenar información en formato <strong>clave-valor</strong> y tiene una capacidad mucho mayor
+                (normalmente 5MB).
+            </p>
+            <p>Se divide en dos tipos principales:</p>
+            <ul>
+                <li><strong>localStorage:</strong> Los datos persisten incluso si cierras el navegador o apagas el
+                    ordenador. No tienen fecha de caducidad.</li>
+                <li><strong>sessionStorage:</strong> Los datos se borran en cuanto se cierra la pestaña o ventana del
+                    navegador.</li>
+            </ul>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Métodos principales (JavaScript)</h3>
+            <p>
+                Para interactuar con el Storage debes usar JavaScript. Los métodos son idénticos para local y session:
+            </p>
+            <pre>
+// Guardar un dato
+localStorage.setItem('usuario', 'Juan Pérez');
+
+// Leer un dato
+let nombre = localStorage.getItem('usuario');
+
+// Borrar un dato específico
+localStorage.removeItem('usuario');
+
+// Borrar TODOS los datos
+localStorage.clear();
+            </pre>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Demo Interactiva: Guardar tu Nombre</h3>
+            <p>
+                Escribe tu nombre abajo y presiona Guardar. Si recargas la página (F5), verás que el nombre sigue ahí
+                porque lo hemos guardado en <strong>localStorage</strong>.
+            </p>
+            <div class="storage_demo">
+                <input type="text" id="nombreInput" placeholder="Escribe tu nombre...">
+                <div class="storage_buttons">
+                    <button onclick="guardarNombre()">Guardar Nombre</button>
+                    <button onclick="borrarNombre()" class="btn_danger">Borrar Datos</button>
+                </div>
+                <p id="mensajeStorage" class="storage_msg">No hay nombre guardado aún.</p>
+            </div>
+
+            <script>
+                // Función para inicializar la lectura al cargar la página
+                window.onload = function () {
+                    let guardado = localStorage.getItem('miNombre');
+                    if (guardado) {
+                        document.getElementById('mensajeStorage').textContent = "¡Hola de nuevo, " + guardado + "!";
+                        document.getElementById('nombreInput').value = guardado;
+                    }
+                }
+
+                function guardarNombre() {
+                    let nombre = document.getElementById('nombreInput').value;
+                    if (nombre.trim() !== '') {
+                        localStorage.setItem('miNombre', nombre);
+                        document.getElementById('mensajeStorage').textContent = "Nombre guardado. ¡Recarga la página para comprobarlo!";
+                    }
+                }
+
+                function borrarNombre() {
+                    localStorage.removeItem('miNombre');
+                    document.getElementById('nombreInput').value = '';
+                    document.getElementById('mensajeStorage').textContent = "Datos borrados correctamente.";
+                }
+            </script>
+        </article>
+
+        <article>
+            <h3>4) Uso común de Storage</h3>
+            <ul>
+                <li><strong>Modo Oscuro/Claro:</strong> Guardar la preferencia del tema del usuario.</li>
+                <li><strong>Sesiones de usuario:</strong> Guardar tokens de autenticación (JWT).</li>
+                <li><strong>Carrito de compras:</strong> Mantener productos seleccionados si el usuario abandona la
+                    página accidentalmente.</li>
+                <li><em>Importante:</em> Nunca guardes contraseñas ni datos altamente sensibles aquí, ya que pueden ser
+                    leídos por scripts del lado del cliente.</li>
+            </ul>
         </article>
     </section>
     <footer>

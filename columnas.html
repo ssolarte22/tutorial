@@ -37,14 +37,63 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Columnas de texto en CSS3</h2>
 
+        <article>
+            <h3>1) Flujo multi-columna</h3>
+            <p>
+                CSS3 introdujo un modulo nativo para dividir texto o contenido en varias columnas,
+                de manera muy similar a como se maquetan los articulos en un periodico o revista.
+                Todo ocurre automaticamente basandose en el ancho del contenedor o en el numero de columnas deseadas.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Propiedades clave</h3>
+            <ul>
+                <li><strong>column-count:</strong> Fija el numero exacto de columnas en las que se dividira el bloque.</li>
+                <li><strong>column-width:</strong> Fija la anchura deseada de cada columna. El navegador calculara cuantas caben.</li>
+                <li><strong>column-gap:</strong> Espacio (margen interno) entre cada columna.</li>
+                <li><strong>column-rule:</strong> Permite dibujar una linea divisoria (estilo borde) entre las columnas.</li>
+            </ul>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Demo: texto a tres columnas</h3>
+            <p>
+                A continuacion, un parrafo extenso dividido en tres columnas usando <code>column-count: 3;</code>.
+                Al cambiar el ancho de la ventana, el texto fluye entre las columnas automaticamente.
+            </p>
+            <div class="columnas_basicas">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus.
+            </div>
+        </article>
+
+        <article>
+            <h3>4) Demo: columnas adaptativas y linea separadora</h3>
+            <p>
+                Aqui no forzamos 3 columnas, sino un ancho minimo mediante <code>column-width: 200px;</code>,
+                y se agrega una linea de separacion via <code>column-rule: 2px solid #ccc;</code>.
+            </p>
+            <div class="columnas_regla">
+                Phasellus magna. In hac habitasse platea dictumst. Curabitur at lacus ac velit ornare lobortis. 
+                Curabitur a felis in nunc fringilla tristique. Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. 
+                Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Sed hendrerit. 
+                Morbi ac felis. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. 
+                Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Nunc nulla.
+            </div>
+        </article>
+
+        <article>
+            <h3>5) Manejo de rupturas (break-inside)</h3>
+            <p>
+                A veces no quieres que una imagen o bloque de contenido se parta por la mitad al saltar de una columna a otra.
+                La propiedad <strong>break-inside: avoid;</strong> soluciona esto, forzando al navegador a pasar 
+                el bloque completo a la siguiente columna.
+            </p>
         </article>
     </section>
     <footer>

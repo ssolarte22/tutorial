@@ -37,14 +37,75 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Formularios en HTML5</h2>
 
+        <article>
+            <h3>1) Nuevos tipos de Input y Autovalidacion</h3>
+            <p>
+                HTML5 introdujo muchos tipos nuevos para la etiqueta <code>&lt;input&gt;</code> (como <em>email, date,
+                    color, range</em>)
+                y atributos especiales de validacion (como <em>required, pattern, min, max</em>).
+            </p>
+            <p>
+                Esto permite que el navegador valide los datos introducidos por el usuario antes de enviar el
+                formulario, reduciendo
+                la necesidad de escribir validaciones complejas con JavaScript.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Demo: Formulario de Registro basico</h3>
+            <p>
+                Intenta enviar el formulario dejandolo vacio, o escribiendo un texto que no sea un email en el campo
+                correspondiente.
+                El propio navegador mostrara tooltips de error gracias al atributo <strong>required</strong> y a
+                <code>type="email"</code>.
+            </p>
+            <div class="form_demo">
+                <form action="#" method="get">
+                    <label for="nombre">Nombre completo (requerido):</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Perez">
+
+                    <label for="correo">Correo electronico:</label>
+                    <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com">
+
+                    <label for="edad">Edad (min 18):</label>
+                    <input type="number" id="edad" name="edad" min="18" max="100">
+
+                    <button type="submit">Enviar Registro</button>
+                </form>
+            </div>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Demo: Inputs visuales (Color, Rango y Fecha)</h3>
+            <p>
+                Dependiendo del navegador (y soporte del sistema operativo), estos inputs muestran interfaces avanzadas
+                (como calendarios nativos o paletas de colores) listas para usar.
+            </p>
+            <div class="form_demo">
+                <form oninput="outRango.value=rango.value">
+                    <label for="fecha">Selecciona una fecha (type="date"):</label>
+                    <input type="date" id="fecha" name="fecha">
+
+                    <label for="color">Elige tu color favorito (type="color"):</label>
+                    <input type="color" id="color" name="color" value="#3498db">
+
+                    <label for="rango">Nivel de satisfaccion (type="range"): <output name="outRango"
+                            for="rango">50</output></label>
+                    <input type="range" id="rango" name="rango" min="0" max="100" value="50">
+                </form>
+            </div>
+        </article>
+
+        <article>
+            <h3>4) Pseudo-clases CSS para validacion</h3>
+            <p>
+                Puedes dar formato visual inmediato a los inputs dependiendo de si sus datos son validos o no,
+                utilizando las pseudo-clases <strong>:valid</strong> y <strong>:invalid</strong> en CSS.
+                Si revisas el CSS de este ejemplo, veras que los campos obligatorios incompletos o incorrectos tienen un
+                borde rojo.
+            </p>
         </article>
     </section>
     <footer>

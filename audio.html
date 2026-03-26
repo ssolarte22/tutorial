@@ -37,14 +37,85 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Audio en HTML5</h2>
 
+        <article>
+            <h3>1) Objetivo del tema</h3>
+            <p>
+                HTML5 permite insertar audio sin plugins externos mediante la etiqueta <strong>&lt;audio&gt;</strong>.
+                El navegador crea un reproductor nativo con controles de reproduccion, pausa y volumen.
+            </p>
+            <p>
+                Lo mas recomendable es ofrecer varias fuentes para mejorar compatibilidad entre navegadores.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Estructura basica</h3>
+            <pre>
+&lt;audio controls&gt;
+  &lt;source src="audio/tema.mp3" type="audio/mpeg"&gt;
+  &lt;source src="audio/tema.ogg" type="audio/ogg"&gt;
+  Tu navegador no soporta audio HTML5.
+&lt;/audio&gt;
+            </pre>
+            <p>
+                La etiqueta <strong>&lt;source&gt;</strong> permite definir formatos alternativos.
+                Si uno falla, el navegador intenta el siguiente.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Demo con controles</h3>
+            <p>
+                Este reproductor incluye controles nativos. Si no existe el archivo todavia,
+                aparecera el reproductor, pero no sonara hasta que agregues un audio valido.
+            </p>
+            <div class="audio_demo_box">
+                <audio controls preload="metadata">
+                    <source src="media/Get Up.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </article>
+
+        <article>
+            <h3>4) Atributos mas usados</h3>
+            <ul>
+                <li><strong>controls</strong>: muestra botonera del reproductor.</li>
+                <li><strong>autoplay</strong>: reproduce automaticamente (puede bloquearse segun politicas del
+                    navegador).</li>
+                <li><strong>loop</strong>: repite el audio al finalizar.</li>
+                <li><strong>muted</strong>: inicia en silencio.</li>
+                <li><strong>preload</strong>: sugiere como cargar contenido (none, metadata, auto).</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>5) Demo de playlist simple (estructura)</h3>
+            <p>
+                Puedes combinar una lista de pistas con un reproductor unico. Aqui tienes la estructura base:
+            </p>
+            <pre>
+&lt;ul&gt;
+  &lt;li&gt;&lt;button&gt;Pista 1&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button&gt;Pista 2&lt;/button&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;audio id="player" controls&gt;&lt;/audio&gt;
+            </pre>
+            <p>
+                Con JavaScript puedes cambiar el atributo <strong>src</strong> del reproductor al pulsar cada boton.
+            </p>
+        </article>
+
+        <article>
+            <h3>6) Buenas practicas</h3>
+            <ul>
+                <li>No uses <strong>autoplay con sonido</strong> por accesibilidad y experiencia de usuario.</li>
+                <li>Muestra siempre texto alternativo dentro de &lt;audio&gt; para navegadores no compatibles.</li>
+                <li>Optimiza peso de los archivos para carga rapida.</li>
+                <li>Usa nombres y carpetas claras, por ejemplo: <em>media/audio/intro.mp3</em>.</li>
+            </ul>
         </article>
     </section>
     <footer>

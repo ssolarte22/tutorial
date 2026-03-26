@@ -37,14 +37,56 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Transparencias y Colores en CSS3</h2>
 
+        <article>
+            <h3>1) Opacidad (opacity)</h3>
+            <p>
+                La propiedad <strong>opacity</strong> define el nivel de transparencia de un elemento completo.
+                Toma valores desde <code>0.0</code> (totalmente invisible) hasta <code>1.0</code> (totalmente opaco).
+                <em>Cuidado:</em> Si aplicas opacity a un contenedor, todos sus hijos (texto, imágenes) heredarán esa
+                misma transparencia.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Demo: Opacity en imágenes</h3>
+            <p>Pasa el ratón sobre cada bloque. El primero cambia su opacidad, afectando también al texto interno.</p>
+            <div class="transp_demo_box opacity_demo">
+                Texto con Opacity
+            </div>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Colores RGBA y HSLA</h3>
+            <p>
+                Si solo quieres que el fondo sea transparente pero el texto resalte opaco, debes usar
+                <strong>rgba(rojo, verde, azul, alpha)</strong> o <strong>hsla(tono, saturacion, luz, alpha)</strong> en
+                lugar de <code>opacity</code>.
+                El valor "alpha" funciona igual (de 0.0 a 1.0).
+            </p>
+        </article>
+
+        <article>
+            <h3>4) Demo: Fondo RGBA vs Opacity</h3>
+            <p>
+                Este bloque tiene un fondo <code>rgba(231, 76, 60, 0.5)</code> (50% transparente). Como puedes ver, el
+                texto se mantiene completamente blanco y opaco.
+            </p>
+            <div class="transp_demo_box transparent_bg">
+                Texto Opaco sobre Fondo RGBA
+            </div>
+        </article>
+
+        <article>
+            <h3>5) Degradados Transparentes (Gradients)</h3>
+            <p>
+                Al usar <code>linear-gradient</code> puedes incluir colores transparentes para lograr efectos de fundido
+                (fade-out) muy utilizados encima de imágenes de fondo.
+            </p>
+            <div class="transp_demo_gradient">
+                <p>Degradado usando RGBA</p>
+            </div>
         </article>
     </section>
     <footer>

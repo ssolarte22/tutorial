@@ -37,14 +37,65 @@
     </nav>
 
     <section>
-        <article>
+        <h2>Insertar contenido externo con iframe</h2>
 
+        <article>
+            <h3>1) ¿Qué es la etiqueta &lt;iframe&gt;?</h3>
+            <p>
+                Un <strong>iframe</strong> (Inline Frame) es un documento HTML incrustado dentro de otro documento HTML.
+                Se utiliza comunmente para mostrar contenido de otros sitios web sin que el usuario tenga que salir de tu pagina.
+                Los usos mas populares incluyen incrustar mapas, videos de YouTube o widgets de redes sociales.
+            </p>
         </article>
-        <article>
 
+        <article>
+            <h3>2) Atributos importantes</h3>
+            <ul>
+                <li><strong>src:</strong> La URL del contenido que quieres incrustar.</li>
+                <li><strong>width y height:</strong> Dimensiones del frame (se recomienda controlarlo desde CSS).</li>
+                <li><strong>title:</strong> Descriptivo para la accesibilidad (muy importante para lectores de pantalla).</li>
+                <li><strong>allowfullscreen:</strong> Permite que el contenido (como un video) se ponga en pantalla completa.</li>
+                <li><strong>loading="lazy":</strong> Hace que el iframe solo se cargue cuando el usuario se acerque a el haciendo scroll (mejora rendimiento).</li>
+            </ul>
         </article>
-        <article>
 
+        <article>
+            <h3>3) Demo: Incrustar un Mapa de Google Maps</h3>
+            <p>
+                Puedes buscar cualquier lugar en Google Maps, presionar "Compartir" y elegir "Insertar un mapa" 
+                para obtener el codigo iframe que ves aqui abajo.
+            </p>
+            <div class="iframe_container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.163351230491!2d-3.7042079237691897!3d40.4169472390618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e0766dd31%3A0xe545c850facba4cd!2sPuerta%20del%20Sol!5e0!3m2!1ses!2ses!4v1711467475892!5m2!1ses!2ses" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Mapa de la Puerta del Sol en Madrid">
+                </iframe>
+            </div>
+        </article>
+
+        <article>
+            <h3>4) Demo: Incrustar un Video de YouTube</h3>
+            <p>
+                Similar a los mapas, en cualquier video de YouTube puedes dar "Compartir" -> "Insertar" para obtener su <code>&lt;iframe&gt;</code>.
+                Para que sea responsive (que se adapte al movil manteniendo su ratio de aspecto) se suele usar un contenedor CSS especifico.
+            </p>
+            <div class="iframe_video_wrapper">
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </article>
     </section>
     <footer>
